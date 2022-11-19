@@ -1,0 +1,91 @@
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    background-color:#ebe3e3;
+  }
+  
+  .container {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  
+  .jumbotron {
+    background: url(https://s3.amazonaws.com/codecademy-content/projects/broadway/bg.jpg);
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+    height: 800px;
+  }
+  
+  .nav {
+    margin: 0;
+    padding: 20px 0;
+  }
+  
+  .nav li {
+    display:inline;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform:uppercase;
+    margin-left:10px;
+    margin-right:10px;
+  }
+  
+  .main {
+    position: relative;
+    top: 180px;
+    text-align: center;
+  }
+  
+  .main h1 {
+    color: #333;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 70px;
+    margin-top: 0;
+    margin-bottom: 80px;
+    text-transform: uppercase;
+  }
+  
+  .btn-main {
+    background-color: #333;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1.3px;
+    padding: 16px 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  .btn-default {
+    color:#333;
+    border:1px solid #333333;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 1.3px;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;  
+    display: inline-block;
+    margin-bottom: 20px; 
+    padding-right:50px;
+    padding-left:50px;
+  }
+  
+ 
+  
+  @media (max-width: 500px) {
+    .main h1 {
+      font-size: 50px;
+      padding: 0 40px;
+    }
+  }
