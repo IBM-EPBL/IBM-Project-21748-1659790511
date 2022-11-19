@@ -1,0 +1,10 @@
+
+body{
+   background: #ebedee;
+   font-family: 'Oswald', sans-serif;
+   font-size: 18px;
+}
+.head h1{
+    text-align: center;
+    color: rgb(146, 153, 153);
+}
