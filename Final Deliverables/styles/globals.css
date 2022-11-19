@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#__next { height: 100% }
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+html {
+  height: -webkit-fill-available;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to bottom, #EFC7C2, #ebebeb 300px);
+}
+
+svg {
+  color: black;
+}
+
+.text-slate-400 {
+  color: black
+}
+
+.text-slate-500 {
+  color: black
+}
+.text-white {
+  color: black !important
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  @apply flex justify-center;
+}
+
+.PopoverContent {
+  transform-origin: var(--radix-popover-content-transform-origin);
+  animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.PopoverContent {
+  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+.PopoverContent[data-side='top'] {
+  animation-name: slideUp;
+}
+.PopoverContent[data-side='bottom'] {
+  animation-name: slideDown;
+}
+
+[data-radix-popper-content-wrapper] {
+  z-index: 1 !important;
+}
+
+
+.ScrollAreaRoot {
+  width: 200px;
+  height: 225px;
+  border-radius: 4px;
+  overflow: hidden;
+  --scrollbar-size: 10px;
+}
+
+.ScrollAreaViewport {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+
+.ScrollAreaScrollbar {
+  display: flex;
+  user-select: none;
+  touch-action: none;
+  padding: 2px;
+  width: 7px;
+  transition: background 160ms ease-out;
+}
+
+.ScrollAreaScrollbar[data-orientation='horizontal'] {
+  flex-direction: column;
+  height: var(--scrollbar-size);
+}
+
+
+.ScrollAreaThumb {
+  flex: 1;
+  border-radius: var(--scrollbar-size);
+  position: relative;
+}
+
+.DialogOverlay {
+  background-color: var(--blackA9);
+  position: fixed;
+  inset: 0;
+  animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.DialogContent {
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 450px;
+  max-height: 85vh;
+  padding: 25px;
+  animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.DialogContent:focus {
+  outline: none;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
