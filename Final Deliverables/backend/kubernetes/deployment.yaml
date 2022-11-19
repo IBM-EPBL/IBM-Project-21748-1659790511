@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-prod
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: flask-prod
+  template:
+    metadata:
+      labels:
+        app: flask-prod
+
+    spec:
+      containers:
+        - name: flask-prod
+          image: icr.io/balasasikanthvaddiparthi/flask-prod
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-prod-service
+spec:
+  type: ClusterIP
+  ports:
+    - port: 8080
+  selector:
+    app: flask-prod
