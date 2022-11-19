@@ -18,7 +18,10 @@ python3 server.py
 ```
 
 Team Members:
-
+VADDIPARTHI BALA SASIKANTH
+JONNALAGADDA VENKATA SURESH BABU
+PARUCHURI PRASANTH
+HUSHIKEASH S
 
 ### Screenshots
 ![image](https://user-images.githubusercontent.com/66306004/202858719-8ee7bd72-129e-4f91-95a2-2f4b30f4be54.png)
